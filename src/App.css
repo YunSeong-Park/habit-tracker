@@ -43,3 +43,45 @@ button {
   font-size: 2rem;
   color: darkred;
 }
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  background-color: ivory;
+}
+
+.Navbar__marker {
+  display: flex;
+  justify-content: center;
+  margin: 0 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: greenyellow;
+  border-radius: 1rem;
+}
+
+.Navbar__leaf {
+  color: green;
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-right: 0.5rem;
+}
+
+.add{
+  margin: 1rem 0 0 2.5rem;
+}
+
+.add__input{
+  height: 1.5rem;
+}
+
+.add__button{
+  height: 1.8rem;
+  margin-left: 0.5rem;
+  background-color: green;
+  color: white;
+}
+
+.add__button:hover{
+  opacity: 0.8;
+}

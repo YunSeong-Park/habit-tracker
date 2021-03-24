@@ -1,9 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import "./app.css";
-import Habits from "./components/habits";
+import Contents from './components/contents';
+import Navbar from "./components/navbar";
 
+class App extends Component {
 
-function App() {
-  return <Habits />;
-};
+  render(){
+    return(
+      <>
+        <Navbar />
+        <Contents />
+      </>
+    )
+  }
+}
 export default App;
