@@ -4,13 +4,17 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  opacity: 0.8;
+}
+
 .habit {
   font-size: 2.5rem;
   padding: 0.5em;
   list-style: none;
 }
 
-.habit-count{
+.habit-count {
   display: inline-block;
   text-align: center;
   font-size: 2rem;
@@ -67,21 +71,25 @@ button {
   padding-right: 0.5rem;
 }
 
-.add{
+.add {
   margin: 1rem 0 0 2.5rem;
 }
 
-.add__input{
+.add__input {
   height: 1.5rem;
 }
 
-.add__button{
+.add__button {
   height: 1.8rem;
   margin-left: 0.5rem;
   background-color: green;
   color: white;
 }
 
-.add__button:hover{
-  opacity: 0.8;
+.clear__button {
+  width: 5rem;
+  height: 2rem;
+  margin-left: 5rem;
+  font-size: 1rem;
+  background-color: tomato;
 }

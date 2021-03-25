@@ -2,18 +2,16 @@ import React, { Component } from "react";
 import Habit from "./habit";
 
 class Habits extends Component {
-  
-
-  handleIncrement = (habit) => {
-    this.props.handleIncrement(habit)
+  handleIncrement = habit => {
+    this.props.handleIncrement(habit);
     // const habits = [...this.props.habits];
     // const index = habits.indexOf(habit);
     // habits[index].count++;
     // this.setState({ habits });
   };
 
-  handleDecrement = (habit) => {
-    this.props.handleDecrement(habit)
+  handleDecrement = habit => {
+    this.props.handleDecrement(habit);
     // const habits = [...this.props.habits];
     // const index = habits.indexOf(habit);
     // const count = habits[index].count - 1;
@@ -22,8 +20,8 @@ class Habits extends Component {
     // this.setState({ habits });
   };
 
-  handleDelete = (habit) => {
-    this.props.handleDelete(habit)
+  handleDelete = habit => {
+    this.props.handleDelete(habit);
     // const habits = this.props.habits.filter(item => item.id !== habit.id);
     // this.setState({ habits });
   };
@@ -34,10 +32,10 @@ class Habits extends Component {
         {this.props.habits.map(habit => (
           <Habit
             key={habit.id}
-             habit={habit}
-             onIncrement={this.handleIncrement}
-             onDecrement={this.handleDecrement}
-             onDelete={this.handleDelete}
+            habit={habit}
+            onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
+            onDelete={this.handleDelete}
           />
         ))}
       </ul>
