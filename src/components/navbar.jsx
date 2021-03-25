@@ -4,12 +4,10 @@ class Navbar extends Component {
   render() {
     const countTotal = this.props.countTotal;
     return (
-      <div className="Navbar">
-        <span className="Navbar__leaf">
-          <i className="fas fa-leaf"></i>
-        </span>
-        <h1 className="Navbar__title">Habit Tracker</h1>
-        <h2 className="Navbar__marker">{countTotal}</h2>
+      <div className="navbar">
+        <i className="navbar-logo fas fa-leaf"></i>
+        <span className="navbar__title">Habit Tracker</span>
+        <span className="navbar-count">{countTotal}</span>
       </div>
     );
   }

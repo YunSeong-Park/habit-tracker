@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./app.css";
-import Contents from "./components/contents";
 import Navbar from "./components/navbar";
+import Habits from "./components/habits";
 
 class App extends Component {
   state = {
@@ -32,37 +32,37 @@ class App extends Component {
     this.setState({ habits });
   };
 
-  addHabit = habit => {
-    const addedHabit = { id: Math.random(), name: habit, count: 0 };
+  addHabit = name => {
+    const addedHabit = { id: Date.now(), name, count: 0 };
     const habits = [...this.state.habits, addedHabit];
-
-    habit && this.setState({ habits });
+    this.setState({ habits });
   };
 
-  clearAll = event => {
-    const habits = [...this.state.habits];
-    habits.map(habit => {
-      habit.count = 0;
-    });
-    this.setState({ habits });
+  onReset = e => {
+    {
+      const habits = this.state.habits.map(habit => {
+        habit.count = 0;
+        return habit;
+      });
+      this.setState({ habits });
+    }
   };
 
   render() {
     return (
       <>
         <Navbar
-          countTotal={this.state.habits.reduce(
-            (countTotal, habit) => habit.count + countTotal,
-            0
-          )}
+          countTotal={
+            this.state.habits.filter(habit => habit.count !== 0).length
+          }
         />
-        <Contents
+        <Habits
           habits={this.state.habits}
           handleIncrement={this.handleIncrement}
           handleDecrement={this.handleDecrement}
           handleDelete={this.handleDelete}
-          addHabit={this.addHabit}
-          clearAll={this.clearAll}
+          onReset={this.onReset}
+          onClick={this.addHabit}
         />
       </>
     );

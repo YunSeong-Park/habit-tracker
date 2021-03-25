@@ -26,19 +26,29 @@ class Habits extends Component {
     // this.setState({ habits });
   };
 
+  clearAll = e => {
+    this.props.onReset();
+  };
+
   render() {
     return (
-      <ul>
-        {this.props.habits.map(habit => (
-          <Habit
-            key={habit.id}
-            habit={habit}
-            onIncrement={this.handleIncrement}
-            onDecrement={this.handleDecrement}
-            onDelete={this.handleDelete}
-          />
-        ))}
-      </ul>
+      <div className="habits">
+        <ul>
+          {this.props.habits.map(habit => (
+            <Habit
+              key={habit.id}
+              habit={habit}
+              onIncrement={this.handleIncrement}
+              onDecrement={this.handleDecrement}
+              onDelete={this.handleDelete}
+            />
+          ))}
+        </ul>
+
+        <button className="habits-reset" onClick={this.clearAll}>
+          Reset All
+        </button>
+      </div>
     );
   }
 }

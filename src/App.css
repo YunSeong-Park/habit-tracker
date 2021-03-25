@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 button {
   outline: none;
   border: 0;
@@ -48,27 +52,29 @@ button:hover {
   color: darkred;
 }
 
-.Navbar {
+.navbar {
   display: flex;
   align-items: center;
-  background-color: ivory;
+  background-color: blanchedalmond;
+  font-size: 2rem;
+  padding: 1em;
 }
 
-.Navbar__marker {
+.navbar-count {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin: 0 0.5rem;
-  width: 2rem;
-  height: 2rem;
-  background-color: greenyellow;
-  border-radius: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: green;
+  border-radius: 50%;
+  color: white;
 }
 
-.Navbar__leaf {
+.navbar-logo {
   color: green;
-  font-size: 2rem;
-  padding-left: 2rem;
-  padding-right: 0.5rem;
+  margin-right: 0.5em;
 }
 
 .add {
@@ -86,7 +92,7 @@ button:hover {
   color: white;
 }
 
-.clear__button {
+.habits-reset {
   width: 5rem;
   height: 2rem;
   margin-left: 5rem;
