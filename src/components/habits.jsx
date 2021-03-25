@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Habit from "./habit";
+import Add from "./add";
 
 class Habits extends Component {
   handleIncrement = habit => {
@@ -30,9 +31,15 @@ class Habits extends Component {
     this.props.onReset();
   };
 
+  onClick = name => {
+    this.props.onClick(name);
+  };
+
   render() {
+    console.log("habits");
     return (
       <div className="habits">
+        <Add onClick={this.onClick} />
         <ul>
           {this.props.habits.map(habit => (
             <Habit

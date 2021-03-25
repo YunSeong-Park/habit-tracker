@@ -39,16 +39,15 @@ class App extends Component {
   };
 
   onReset = e => {
-    {
-      const habits = this.state.habits.map(habit => {
-        habit.count = 0;
-        return habit;
-      });
-      this.setState({ habits });
-    }
+    const habits = this.state.habits.map(habit => {
+      habit.count = 0;
+      return habit;
+    });
+    this.setState({ habits });
   };
 
   render() {
+    console.log("app");
     return (
       <>
         <Navbar

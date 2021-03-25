@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 class Navbar extends Component {
   render() {
+    console.log("navbar");
     const countTotal = this.props.countTotal;
     return (
       <div className="navbar">
